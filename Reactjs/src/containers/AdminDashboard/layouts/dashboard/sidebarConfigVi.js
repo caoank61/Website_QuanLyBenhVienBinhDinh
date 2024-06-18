@@ -26,11 +26,6 @@ const sidebarConfigVi = [
     icon: getIcon("icon-park:plan"),
   },
   {
-    title: "Quản lý bệnh viện",
-    path: "/admin-dashboard/manage-clinic",
-    icon: getIcon("healthicons:ambulatory-clinic"),
-  },
-  {
     title: "Quản lý chuyên khoa",
     path: "/admin-dashboard/manage-specialty",
     icon: getIcon("medical-icon:health-services"),

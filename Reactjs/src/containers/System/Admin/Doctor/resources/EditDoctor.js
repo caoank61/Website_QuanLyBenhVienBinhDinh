@@ -208,14 +208,14 @@ class EditDoctor extends Component {
       selectedPrice: this.state.selectedPrice,
       selectedPayment: this.state.selectedPayment,
       selectedProvice: this.state.selectedProvice,
-      nameClinic: this.state.nameClinic,
+      nameClinic: this.state.nameClinic || "",
       addressClinic: this.state.addressClinic,
       note: this.state.note,
-      clinicId:this.state.selectedClinic,
+      clinicId:this.state.selectedClinic || 9,
       specialtyId: this.state.selectedSpecialty,
     });
 
-    setTimeout(function(){ window.location.href = '/admin-dashboard/manage-doctor' }, 1000);
+    // setTimeout(function(){ window.location.href = '/admin-dashboard/manage-doctor' }, 1000);
     
   };
 
@@ -484,23 +484,6 @@ class EditDoctor extends Component {
               }
               name="selectedSpecialty"
             /> */}
-          </div>
-          <div className="col-4 form-group">
-            <label>
-            {this.props.language=="en" ? "Hospital" : "Bệnh viện"}
-            </label>
-
-            <select class="form-control" id="exampleFormControlSelect1"
-            value={this.state.selectedClinic}
-            onChange={(event)=>this.handleOnChangeSelect(event,"selectedClinic")}
-            >
-              <option value="">{this.props.language=="en" ? "Choose hospital" : "Chọn bệnh viện"}</option>
-              {
-                this.state.listClinic.map((clinic)=>{
-                  return(<option value={clinic.value}>{clinic.label}</option>)
-                })
-              }
-            </select>
           </div>
         </div>
         <div className="manage-doctor-editor">

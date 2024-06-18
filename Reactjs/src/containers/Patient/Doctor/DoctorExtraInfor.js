@@ -57,17 +57,6 @@ class DoctorExtraInfor extends Component {
     return (
       <div className="doctor-extra-infor-container">
         <div className="content-up">
-          <div className="text-address">
-            <FormattedMessage id="patient.extra-infor-doctor.text-address" />
-          </div>
-          <div className="name-clinic">
-            {extraInfor && extraInfor.nameClinic ? extraInfor.nameClinic : ""}
-          </div>
-          <div className="detail-address">
-            {extraInfor && extraInfor.addressClinic
-              ? extraInfor.addressClinic
-              : ""}
-          </div>
         </div>
         <div className="content-down">
           {isShowDetailInfor === false && (

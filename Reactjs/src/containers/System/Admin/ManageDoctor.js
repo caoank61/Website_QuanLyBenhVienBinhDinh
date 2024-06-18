@@ -455,7 +455,6 @@ class ManageDoctor extends Component {
                     <th scope="col"><FormattedMessage id="admin.manage-doctor.name" /></th>
                     <th scope="col"><FormattedMessage id="admin.manage-doctor.position" /></th>
                     <th scope="col"><FormattedMessage id="admin.manage-doctor.specialty-head" /></th>
-                    <th scope="col"><FormattedMessage id="admin.manage-doctor.hospital" /></th>
                     <th scope="col"><FormattedMessage id="admin.manage-doctor.province" /></th>
                     <th scope="col" class="text-right">&nbsp;</th>
                 </tr>
@@ -476,7 +475,6 @@ class ManageDoctor extends Component {
                         <td>{doctor.lastName + " "+ doctor.firstName}</td>
                         <td>{language=="en" ? doctor.positionData.valueEn : doctor.positionData.valueVi}</td>
                         <td>{doctor.Doctor_Infor.specialtyData.name}</td>
-                        <td>{doctor.Doctor_Infor.clinicData.name}</td>
                         <td>{language=="en" ? doctor.Doctor_Infor.provinceTypeData.valueEn : doctor.Doctor_Infor.provinceTypeData.valueVi}</td>
                         <td class="text-right">
                               <button

@@ -101,11 +101,6 @@ let getAllDoctors = () => {
                 as: "provinceTypeData",
                 attributes: ["valueEn", "valueVi"],
               },
-              {
-                model: db.Clinic,
-                as: "clinicData",
-                attributes: ["name"],
-              },
             ],
           },
         ],
@@ -292,11 +287,9 @@ let saveDetailInforDoctor = (inputData) => {
           doctorInfor.priceId = inputData.selectedPrice;
           doctorInfor.provinceId = inputData.selectedProvice;
           doctorInfor.paymentId = inputData.selectedPayment;
-          doctorInfor.nameClinic = inputData.nameClinic;
           doctorInfor.addressClinic = inputData.addressClinic;
           doctorInfor.note = inputData.note;
           doctorInfor.specialtyId = inputData.specialtyId;
-          doctorInfor.clinicId = inputData.clinicId;
 
           await doctorInfor.save();
         } else {
@@ -306,11 +299,9 @@ let saveDetailInforDoctor = (inputData) => {
             priceId: inputData.selectedPrice,
             provinceId: inputData.selectedProvice,
             paymentId: inputData.selectedPayment,
-            nameClinic: inputData.nameClinic,
             addressClinic: inputData.addressClinic,
             note: inputData.note,
             specialtyId: inputData.specialtyId,
-            clinicId: inputData.clinicId,
           });
         }
         resolve({

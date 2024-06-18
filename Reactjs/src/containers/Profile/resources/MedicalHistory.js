@@ -231,7 +231,7 @@ const handleGetValueUnit=(unitKey)=>{
                                   <td class="text-center">
                                       <div class="pointer text-primary" onClick={()=>history.push(`/detail-doctor/${item.doctorId}`)}>{item.doctorDataHistory.lastName} {item.doctorDataHistory.firstName}</div>
                                       <div class="pointer text-primary" onClick={()=>history.push(`/detail-specialty/${item.doctorDataHistory.Doctor_Infor.specialtyId}`)}>{item.doctorDataHistory.Doctor_Infor.specialtyData.name}</div>
-                                      <div class="pointer text-primary" onClick={()=>history.push(`/detail-clinic/${item.doctorDataHistory.Doctor_Infor.clinicId}`)}>{item.doctorDataHistory.Doctor_Infor.clinicData.name}</div>
+                                      <div class="pointer text-primary" onClick={()=>history.push(`/detail-clinic/${item.doctorDataHistory.Doctor_Infor.clinicId}`)}></div>
                                   </td>
                                   <td>
                                   <ul class="list-group" style={{overflowY: 'scroll', maxHeight:'150px'}}>
